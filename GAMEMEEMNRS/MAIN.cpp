@@ -1,3 +1,4 @@
+
 #include<SFML/Graphics.hpp>
 #include<sstream>
 #include <SFML/Audio.hpp>
@@ -47,10 +48,10 @@ int main()
 	}
 
 
-	RenderWindow window(VideoMode(1920, 1080), "winter is here", Style::Fullscreen);
+	RenderWindow window(VideoMode(1920, 1080), "GAMEMEEMNRS",Style::Fullscreen);
 	Font fo;
 	Texture background;
-	background.loadFromFile("graphics/score.jpg");
+	background.loadFromFile("graphics/score.png");
 	fo.loadFromFile("font/font1.ttf");
 	Sprite backg(background);
 
@@ -61,54 +62,53 @@ int main()
 	play.setFont(fo);
 	play.setString("play");
 	play.setCharacterSize(120);
-	play.setFillColor(Color::Yellow);
-	play.setPosition(770, 250);
+	play.setFillColor(Color::Red);
+	play.setPosition(770, 100);
 
 	checkedplay.setFont(fo);
 	checkedplay.setString("play");
 	checkedplay.setCharacterSize(120);
-	checkedplay.setFillColor(Color::Red);
-	checkedplay.setPosition(770, 250);
+	checkedplay.setFillColor(Color::Yellow);
+	checkedplay.setPosition(770, 100);
 
 	setting.setFont(fo);
 	setting.setString("setings");
 	setting.setCharacterSize(120);
-	setting.setFillColor(Color::Yellow);
-	setting.setPosition(770, 450);
+	setting.setFillColor(Color::Red);
+	setting.setPosition(770, 300);
 
 	checkedsettings.setFont(fo);
 	checkedsettings.setString("setings");
 	checkedsettings.setCharacterSize(120);
-	checkedsettings.setFillColor(Color::Red);
-	checkedsettings.setPosition(770, 450);
+	checkedsettings.setFillColor(Color::Yellow);
+	checkedsettings.setPosition(770, 300);
 
 	score.setFont(fo);
-	score.setString("score board");
+	score.setString("score");
 	score.setCharacterSize(120);
-	score.setFillColor(Color::Yellow);
-	score.setPosition(770, 650);
+	score.setFillColor(Color::Red);
+	score.setPosition(770, 500);
 
 	checkedscore.setFont(fo);
-	checkedscore.setString("score board");
+	checkedscore.setString("score");
 	checkedscore.setCharacterSize(120);
-	checkedscore.setFillColor(Color::Red);
-	checkedscore.setPosition(770, 650);
+	checkedscore.setFillColor(Color::Yellow);
+	checkedscore.setPosition(770, 500);
 
 	exit.setFont(fo);
 	exit.setString("exit");
 	exit.setCharacterSize(120);
-	exit.setFillColor(Color::Yellow);
-	exit.setPosition(770, 850);
+	exit.setFillColor(Color::Red);
+	exit.setPosition(770, 700);
 
 	checkedexit.setFont(fo);
 	checkedexit.setString("exit");
 	checkedexit.setCharacterSize(120);
-	checkedexit.setFillColor(Color::Red);
-	checkedexit.setPosition(770, 850);
+	checkedexit.setFillColor(Color::Yellow);
+	checkedexit.setPosition(770, 700);
+	
+	
 	//prepare the sound
-
-
-
 	sound1Buffer.loadFromFile("sound/sound1.wav");
 	sound1.setBuffer(sound1Buffer);
 	sound1.setLoop(true);
@@ -219,22 +219,22 @@ void mood()
 		sound1.stop();
 	}
 	int pressCounter = 0;
-	cout << '*';
-	RenderWindow WINDOW(VideoMode(1920, 1080), "winter is here", Style::Fullscreen);
+	cout << '+';
+	RenderWindow WINDOW(VideoMode(1920, 1080), "GAMEMEEMNRS",Style::Fullscreen);
 	Font fo;
 	Texture background, sannd, seea;
-	background.loadFromFile("graphics/score.jpg");
+	background.loadFromFile("graphics/score.png");
 	fo.loadFromFile("font/font1.ttf");
 	Sprite backg(background), sea(seea), sand(sannd);
 	Text insand, insea, checkedinsea, checkedinsand;
 	insand.setFont(fo);
-	insand.setString("in sand");
-	sannd.loadFromFile("graphics/sand1.jpg");
+	insand.setString("LET'S GO!!");
+	sannd.loadFromFile("graphics/sand.jpg");
 	insand.setCharacterSize(120);
-	insand.setFillColor(Color::Yellow);
-	insand.setPosition(870, 250);
+	insand.setFillColor(Color::Red);
+	insand.setPosition(700, 500);
 	insea.setFont(fo);
-	insea.setString("in sea");
+	insea.setString("");
 
 	insea.setCharacterSize(120);
 	insea.setFillColor(Color::Yellow);
@@ -243,16 +243,16 @@ void mood()
 
 
 	checkedinsea.setFont(fo);
-	checkedinsea.setString("in sea");
+	checkedinsea.setString("");
 	checkedinsea.setCharacterSize(120);
 	checkedinsea.setFillColor(Color::Red);
 	checkedinsea.setPosition(1500, 250);
 
 	checkedinsand.setFont(fo);
-	checkedinsand.setString("in sand");
+	checkedinsand.setString("LET'S GO!!");
 	checkedinsand.setCharacterSize(120);
-	checkedinsand.setFillColor(Color::Red);
-	checkedinsand.setPosition(870, 250);
+	checkedinsand.setFillColor(Color::Yellow);
+	checkedinsand.setPosition(700, 500);
 
 	while (WINDOW.isOpen()) {
 		Event even;
@@ -335,7 +335,7 @@ void scor()
 		sound1.stop();
 	}
 
-	RenderWindow window(VideoMode(1920, 1080), "winter is here", Style::Fullscreen);
+	RenderWindow window(VideoMode(1920, 1080), "GAMEMEEMNRS", Style::Fullscreen);
 	Font fo;
 	Texture background;
 	background.loadFromFile("graphics/1111.jpg");
@@ -343,7 +343,7 @@ void scor()
 	sbackground.setTexture(background);
 	fo.loadFromFile("font/font1.ttf");
 	SoundBuffer sound2Buffer;
-	sound2Buffer.loadFromFile("sound/4.wav");
+	sound2Buffer.loadFromFile("sound/sound4.wav");
 	Sound sound2;
 	sound2.setBuffer(sound2Buffer);
 	if (k == 1)
@@ -378,7 +378,7 @@ void scor()
 	high.setFont(fo);
 	//high.setString(max);
 	high.setCharacterSize(100);
-	high.setFillColor(Color::White);
+	high.setFillColor(Color::Magenta);
 	high.setPosition(1000, 120);
 	stringstream d;
 	d << "high score : " << max << endl << "name : " << maxscore;
@@ -388,7 +388,7 @@ void scor()
 	score.setFont(fo);
 	//score.setString(content);
 	score.setCharacterSize(30);
-	score.setFillColor(Color::White);
+	score.setFillColor(Color::Magenta);
 	score.setPosition(630, 120);
 	stringstream s;
 	s << "score : " << endl << content;
@@ -411,7 +411,7 @@ void scor()
 	player.setFont(fo);
 	//player.setString(content2);
 	player.setCharacterSize(30);
-	player.setFillColor(Color::White);
+	player.setFillColor(Color::Magenta);
 	player.setPosition(230, 120);
 	stringstream p;
 	p << "name : " << endl << content2;
@@ -473,16 +473,17 @@ void scor()
 
 
 int settings() {
-	RenderWindow win(VideoMode(500, 600), " ", Style::None);
+	RenderWindow win(VideoMode(500, 600), "GAMEMEEMNRS", Style::Default);
 	RectangleShape shape1(Vector2f(70, 20));
 	RectangleShape turn(Vector2f(35, 25));
 	turn.setFillColor(Color::Black);
 	turn.setPosition(Vector2f(350, 220));
 	shape1.setPosition(Vector2f(350, 222.5));
 
+
 	double r = 100, g = 100, b = 100;
 	Texture tex;
-	tex.loadFromFile("graphics/score.jpg");
+	tex.loadFromFile("graphics/score.png");
 	Sprite background(tex);
 	Font fo;
 	fo.loadFromFile("font/font1.ttf");
@@ -580,8 +581,10 @@ int settings() {
 			light.setFillColor(Color::Black);
 			dark.setFillColor(Color::Red);
 		}
-
-		if (Keyboard::isKeyPressed(Keyboard::Escape)) {
+		
+		if (Keyboard::isKeyPressed(Keyboard::Escape)) 
+		{
+			win.clear();
 			return main();
 		}
 		win.clear();
@@ -593,10 +596,10 @@ int settings() {
 		win.draw(dark);
 		win.draw(shape1);
 		win.draw(turn);
-		//win.draw(road);
 		win.display();
+		win.clear();
 	}
-}
+} 
 
 int Mode1level = 1;
 void mainGame()
@@ -632,34 +635,23 @@ void mainGame()
 
 	bool deathflag = 0;
 
-	//int a, s;
-	//puting the background in the array
-
-
-
-
-
-
+	
 
 
 
 
 	int randx = 12;
 	int randy = 1;
-	//gameMap[randy][randx] = 5;
+	
 
 
 	VideoMode vm(1920, 1080);
 
-	RenderWindow Window(vm, "digjim", Style::Fullscreen);
+	RenderWindow Window(vm, "GAMEMEEMNRS", Style::Fullscreen);
 	Window.setFramerateLimit(120);
 
 	int score = 0;
-	//scorebartext
-
-
-
-
+	
 
 
 
@@ -688,7 +680,7 @@ void mainGame()
 	texturescorebar.loadFromFile("graphics/scorebar.jpg");
 	spritescorebar.setTexture(texturescorebar);
 	//squares
-	texturesquares.loadFromFile("graphics/squares.png");
+	texturesquares.loadFromFile("graphics/squares.jpg");
 	spritesquares.setTexture(texturesquares);
 
 
@@ -701,7 +693,7 @@ void mainGame()
 	monster3.loadFromFile("graphics/monster.png");
 	smonster3.setTexture(monster3);
 	Texture Tcharc;
-	Tcharc.loadFromFile("graphics/charc.jpg");
+	Tcharc.loadFromFile("graphics/charc.png");
 
 	Sprite Scharc(Tcharc);
 	Scharc.setColor(Color(r, g, b));
@@ -717,15 +709,15 @@ void mainGame()
 	Score.setFont(fo);
 	Score.setString("Score :");
 	Score.setCharacterSize(80);
-	Score.setFillColor(Color::Red);
+	Score.setFillColor(Color::Cyan);
 	steps.setFont(fo);
-	steps.setString("steps *_*");
+	steps.setString("steps ");
 	steps.setCharacterSize(29);
-	steps.setFillColor(Color::Red);
+	steps.setFillColor(Color::Cyan);
 	timer.setFont(fo);
 	timer.setString("Timer:");
 	timer.setCharacterSize(80);
-	timer.setFillColor(Color::Red);
+	timer.setFillColor(Color::Cyan);
 	steps.setPosition(33 * 40, 24 * 40);
 	timer.setPosition(15 * 40, 22.75 * 40);
 	Score.setPosition(1 * 40, 22.75 * 40);
@@ -737,14 +729,14 @@ void mainGame()
 	score2.setPosition(8.50 * 40, 22.75 * 40);
 	score2.setFont(fo);
 	score2.setCharacterSize(80);
-	score2.setFillColor(Color::Red);
+	score2.setFillColor(Color::Cyan);
 	stringstream pi2;
 	pi2 << seconds;
 	timer2.setString(pi2.str());
 	timer2.setFont(fo);
 	timer2.setPosition(21 * 40, 22.75 * 40);
 	timer2.setCharacterSize(80);
-	timer2.setFillColor(Color::Red);
+	timer2.setFillColor(Color::Cyan);
 
 	//	score = 19;
 
@@ -968,7 +960,7 @@ void mainGame()
 		score2.setPosition(8.50 * 40, 22.75 * 40);
 		score2.setFont(fo);
 		score2.setCharacterSize(80);
-		score2.setFillColor(Color::Red);
+		score2.setFillColor(Color::Cyan);
 
 		seconds = clock();
 		stringstream pi2;
@@ -977,7 +969,7 @@ void mainGame()
 		timer2.setPosition(21 * 40, 22.75 * 40);
 		timer2.setCharacterSize(80);
 		timer2.setFont(fo);
-		timer2.setFillColor(Color::Red);
+		timer2.setFillColor(Color::Cyan);
 
 
 
@@ -1098,7 +1090,6 @@ void mainGame()
 						swap(gameMap[d - 1][randx - 1], gameMap[d][randx - 1]);
 						d++;
 						}
-
 						k--;
 						}
 						*/
@@ -1159,7 +1150,6 @@ void mainGame()
 						swap(gameMap[d - 1][randx], gameMap[d][randx]);
 						d++;
 						}
-
 						k--;
 						}
 						*/
@@ -1231,9 +1221,7 @@ void mainGame()
 		{
 		base = clock(); move = 0;
 		}
-
 		runner = clock();
-
 		if (runner - base >= x&&runner - base <= y) {
 		x += 250; y += 250;
 		stoneMovement();
@@ -1399,14 +1387,14 @@ void stoneMovement() {
 void death(int score) {
 
 	SoundBuffer sound3Buffer;
-	sound3Buffer.loadFromFile("sound/4.wav");
+	sound3Buffer.loadFromFile("sound/sound4.wav");
 	Sound sound3;
 	sound3.setBuffer(sound3Buffer);
 
-	VideoMode vm(500, 400);
-	RenderWindow window(vm, "digjim", Style::None);
+	VideoMode vm(526, 296);
+	RenderWindow window(vm, "GAMEMEEMNRS", Style::None);
 	Texture background;
-	background.loadFromFile("graphics/shfeq.jpg");
+	background.loadFromFile("graphics/shfeq.png");
 	Sprite sbackground;
 	sbackground.setTexture(background);
 	Font fo;
@@ -1417,7 +1405,7 @@ void death(int score) {
 	text1.setFont(fo);
 	text1.setCharacterSize(20);
 	text1.setStyle(Text::Bold);
-	text1.setFillColor(Color::Blue);
+	text1.setFillColor(Color::Black);
 	text1.setPosition(40, 150);
 	text1.setStyle(Text::Bold);
 	text1.setString("ENTER YOUR NAME : ");
@@ -1432,8 +1420,8 @@ void death(int score) {
 	text2.setFont(fo);
 	text2.setCharacterSize(20);
 	text2.setStyle(Text::Bold);
-	text2.setFillColor(Color::Blue);
-	text2.setPosition(40, 300);
+	text2.setFillColor(Color::Black);
+	text2.setPosition(40, 220);
 	text2.setStyle(Text::Bold);
 	stringstream p;
 	p << "score : " << score;
@@ -1529,7 +1517,7 @@ void level2() {
 	bool attacks = 0;
 	int x, y, starpos = 0, stars = 11, posx = 34, posy = 14, posx1 = 18, posy1 = 14;
 	VideoMode vm(1920, 1080);
-	RenderWindow Window(vm, "digjim", Style::Fullscreen);
+	RenderWindow Window(vm, "GAMEMEEMNRS", Style::Fullscreen);
 	//background
 	Texture textureBackground, grass, bubble, texturediamond, deadchar, star1, star2, star3, door, shell, attack;
 	Sprite spritebackground, spritegrass, spritebubble, spritediamond, notchar, sstar1, sstar2, sstar3, dooor, sshell, sattack;
@@ -1548,7 +1536,7 @@ void level2() {
 	//star
 	star1.loadFromFile("graphics/star.jpg");
 	sstar1.setTexture(star1);
-	star2.loadFromFile("graphics/star 1.jpg");
+	star2.loadFromFile("graphics/star1.jpg");
 	sstar2.setTexture(star2);
 	star3.loadFromFile("graphics/star2.jpg");
 	sstar3.setTexture(star3);
@@ -1565,7 +1553,7 @@ void level2() {
 	Font fo;
 	fo.loadFromFile("font/font1.ttf");
 	steps.setFont(fo);
-	steps.setString("steps *_*");
+	steps.setString("steps ");
 	steps.setCharacterSize(29);
 	steps.setPosition(33 * 40, 24 * 40);
 	steps.setFillColor(Color::Red);
@@ -1882,7 +1870,7 @@ void level2() {
 			deathflag = 1;
 			//notchar.setPosition(x * 40, y * 40);
 		//	gameMap[y - 1][x - 1] = 1;
-
+		
 
 		}
 
